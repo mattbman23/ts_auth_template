@@ -1,0 +1,37 @@
+@baseUrl=http://localhost:5050/api/users
+ 
+### Create User
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "firstName": "mike",
+    "lastName": "budiman",
+    "password": "password",
+    "passwordConfirmation": "password",
+    "email": "mike@budiman.com"
+}
+
+### Verify User (verify/:id/:verificationCode)
+POST {{baseUrl}}/verify/641353daa46609d0a9bd682d/e15f7db0-023b-49be-829d-ac0b47b406ab
+
+### Send Reset Password Email
+POST {{baseUrl}}/forgotpassword
+Content-Type: application/json
+
+{
+    "email": "matthew@budi.com"
+}
+
+### Reset Password
+POST {{baseUrl}}/resetpassword/6412a27fb9d2647be3b2017d/c68d1a7c-51c7-4313-8c7d-2d6d456b798b
+Content-Type: application/json
+
+{
+    "password": "matthewbudiman",
+    "passwordConfirmation": "matthewbudiman"
+}
+
+### Get current user
+GET {{baseUrl}}/me
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEzNTNkYWE0NjYwOWQwYTliZDY4MmQiLCJlbWFpbCI6Im1pa2VAYnVkaW1hbi5jb20iLCJmaXJzdE5hbWUiOiJtaWtlIiwibGFzdE5hbWUiOiJidWRpbWFuIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xNlQxNzozNzozMC44MDZaIiwidXBkYXRlZEF0IjoiMjAyMy0wMy0xNlQxNzozODowNi43ODdaIiwiaWF0IjoxNjc5MDAxNTE0LCJleHAiOjE2NzkwMDE1NzR9.TyEqNRAGw5gN0DbYF5DNORN9FZDNk6o5x30nEEVzBXEL1afnwffsUop05Mlv_tzefGo7FF_AYpqFEJSqXGzF8AMJae2JTOF5z35teBGvzoY4hl6PbSrHVBZeoCtWUuPPqdOezxWh8UpvL7e4M_G88rqNUyN3o8T6EoeCE-XsPXNnnbqdyXb9E1en9Kd0Ycx3uyu0dLkMJ7Hvqd-n_sZzk32rdTFbBmWlTHm9sDM3oP9KODpU1mQGhL4sPIDv3KrXqXzHNvF7AmLkQVF_RQmj-KwwJZJBD3mymRFQQMGXC9YCltnGL678OcP1WDpXgDR4t0MzcxAwASOEXYeaZxsIWQ

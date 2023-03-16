@@ -1,0 +1,5 @@
+### Dependencise
+node_modules
+
+### Env vars
+.env

@@ -1,0 +1,15 @@
+@baseUrl=http://localhost:5050/api/session
+ 
+### Login User, will create session
+POST {{baseUrl}}
+Content-Type: application/json
+
+{ 
+    "email": "sally@budiman.com",
+    "password": "password"
+}
+ 
+### Refresh Token
+POST {{baseUrl}}/refresh
+Content-Type: application/json
+x-refresh: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjoiNjQxMzg2NWQ0MWI5MjU5Y2NkZDBkMWQ5IiwiaWF0IjoxNjc5MDAxMTgxLCJleHAiOjE2Nzk2MDU5ODF9.ZL5QwCjEmV1huXtaJ8CfYlLRfAiuWlwVheacd7LBfJfQ5xscDeLe4fZ1VeP_qyF_J6mb4AD-E3Jr_HJIliml_hFlKXZzlDFFOvoG-YsDmtmpxmjNDdzzz5hmWHehmmzUgFbGt43A3pscsiGa7lM2cqcqJ5okCDAdy2guXLgzjL6PhDBepfUnsHuY2qELV_EHzLXcPisWxsgBZ2z3ZQMokYl3jSqbPU1TO0J7sdFrNPP-HRjtlBnvRtExqgH5OsgERUU0CmloSKD851NUxJ4-c676NVGX3TVJwgwfgdZnkLHAzK53WrRcOZNJ5D_InNgbAigw4CW6dUk3Ls2859GSfA
